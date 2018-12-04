@@ -296,7 +296,7 @@ using namespace little_endian_io;
 
 void WavFile::writeNewWav(std::vector<int> &donnees)
 {
-    ofstream f( "result.wav", ios::binary );
+    ofstream f( "audio4RIR.wav", ios::binary );
     int val = (m_fileFormat.sampleRate() * m_fileFormat.sampleSize() * m_fileFormat.channelCount()) / 8;
 
       // Write the file headers

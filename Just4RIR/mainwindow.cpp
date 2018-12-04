@@ -664,7 +664,7 @@ void MainWindow::on_bouton_saveRir_clicked()
     std::vector<std::vector<double> > rir = m_sourceImage[m_numListener].getY();
     if(!rir.empty())
     {
-        QString chemin = QCoreApplication::applicationDirPath() + "/rirSauvegardee.txt";
+        QString chemin = QCoreApplication::applicationDirPath() + "/saved4RIR.txt";
         QFile fichier(chemin);
 
          // sauvegarder rir
@@ -687,7 +687,7 @@ void MainWindow::on_bouton_saveRir_clicked()
             }
          fichier.close(); // ferme le fichier
     }
-    else QMessageBox::warning(NULL,"Beware","Direct sound only");
+    else QMessageBox::warning(NULL,"Beware","No data available");
 }
 
 
@@ -697,7 +697,7 @@ void MainWindow::on_bouton_diffRir_clicked()
      std::vector<std::vector<double> > diff_rir = m_sourceImage[m_numListener].getY();
      if(!diff_rir.empty())
      {
-         QString chemin = QCoreApplication::applicationDirPath() + "/rirSauvegardee.txt";
+         QString chemin = QCoreApplication::applicationDirPath() + "/saved4RIR.txt";
          QFile fichier(chemin);
 
          float i(0), j;
@@ -740,7 +740,7 @@ void MainWindow::on_bouton_diffRir_clicked()
          plot->makePlot();
          plot->show();
      }
-     else QMessageBox::warning(NULL,"Beware","Direct sound only");
+     else QMessageBox::warning(NULL,"Beware","No data available");
 
 
 }
@@ -877,7 +877,7 @@ void MainWindow::on_bouton_data_clicked()
             }
 
             // Exporter tableau
-            QString newName(QCoreApplication::applicationDirPath() + "/data.txt");
+            QString newName(QCoreApplication::applicationDirPath() + "/data4RIR.txt");
             QFile fichier(newName);
              i=0;
             while(fichier.exists()) // incrementation de version de fichier s'il existe deja
@@ -1149,7 +1149,7 @@ void MainWindow::on_bouton_convolution_clicked()
              if(wav.open(m_fichierAudio))
              {
                 wav.writeNewWav(newData);
-                m_fichierAudio = QCoreApplication::applicationDirPath() + "/result.wav";
+                m_fichierAudio = QCoreApplication::applicationDirPath() + "/audio4RIR.wav";
                 ui->bouton_ecouter->setText("Result");
 
                 wav.close();
@@ -1177,7 +1177,7 @@ void MainWindow::on_positionChanged(qint64 position)
     ui->AudioSlider->setValue(position);
     if (position >= ui->AudioSlider->maximum()){
         ui->AudioSlider->setValue(0);
-        if(player->currentMedia().canonicalUrl() == QUrl::fromLocalFile(QCoreApplication::applicationDirPath() + "/result.wav"))
+        if(player->currentMedia().canonicalUrl() == QUrl::fromLocalFile(QCoreApplication::applicationDirPath() + "/audio4RIR.wav"))
             ui->bouton_ecouter->setText("Result");
         else
             ui->bouton_ecouter->setText("Play");
