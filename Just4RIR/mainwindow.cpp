@@ -1366,6 +1366,6 @@ void MainWindow::on_radioButton_initSource_clicked()
 
 void MainWindow::on_actionUser_manual_triggered()
 {
-    QString link = "https://github.com/RobinGueguen/Just4RIR/blob/master/Just4RIR%20-%20User%20Manuel.pdf";
+    QString link = "https://github.com/RobinGueguen/Just4RIR/blob/master/Just4RIR%20-%20User%20Manual.pdf";
     QDesktopServices::openUrl(QUrl(link));
 }
