@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/bandFilter">
+        <file>bandFilters.txt</file>
+    </qresource>
+</RCC>

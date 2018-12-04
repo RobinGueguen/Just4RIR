@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/mat">
+        <file>Material.Li8</file>
+    </qresource>
+</RCC>
