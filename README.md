@@ -19,3 +19,8 @@ Then, it depends of what you need :
 - To visualize Rays or Images-sources : Go on the Export section and click the corresponding button. Then, go on Blender, in the "Import Obj" field of the Just4RIR tool, select mesh4RIR\_EXPORT.obj and click on IMPORT. 
 
 Or read the user manual : https://github.com/RobinGueguen/Just4RIR/blob/master/Just4RIR%20-%20User%20Manuel.pdf
+
+
+bugs :
+- No audio player on linux (audio reverberated only available on the audio4RIR.wav file)
+- If you have selected a mesh file in another place than the folder containing Just4RIR.exe, and you want to use Blender, you have to delete it to for selecting the good mesh4RIR.obj file.
