@@ -22,5 +22,7 @@ Or read the user manual : https://github.com/RobinGueguen/Just4RIR/blob/master/J
 
 
 BUGS :
+- No audio export without using Qt (debug on process)
 - [LINUX] No audio player (audio reverberated only available on the audio4RIR.wav file)
-- [MacOS] If you have selected a mesh file in another place than the folder containing Just4RIR.exe, and you want to use Blender, you have to delete it to for selecting the good mesh4RIR.obj file.
+- If you have selected a mesh file in another place than the folder containing Just4RIR.exe, and you want to use Blender, you have to delete it to for selecting the good mesh4RIR.obj file.
+
